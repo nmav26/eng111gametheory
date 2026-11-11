@@ -128,6 +128,7 @@ td.hit{background:var(--lime);transform:scale(1.04);box-shadow:0 16px 30px -14px
 #key .wrap>*{position:relative}
 #kgrid{grid-template-columns:repeat(auto-fit,minmax(240px,280px));justify-content:center;gap:26px;padding:44px 36px;border-radius:56px;background:linear-gradient(160deg,rgba(195,217,214,.09),rgba(195,217,214,.03));border:1px solid rgba(195,217,214,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 30px 60px -30px rgba(0,0,0,.6)}
 @media(max-width:560px){#kgrid{padding:28px 18px;border-radius:40px}}
+.glow{color:var(--lime);font-weight:700;text-shadow:0 0 10px rgba(201,220,61,.6),0 0 22px rgba(201,220,61,.25)}
 .rv{opacity:1}.js .rv{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}.js .rv.in{opacity:1;transform:none}
 @media(max-width:560px){.res{grid-template-columns:1fr}nav{gap:16px;padding:12px 16px;font-size:15px;overflow-x:auto}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
@@ -161,7 +162,7 @@ td.hit{background:var(--lime);transform:scale(1.04);box-shadow:0 16px 30px -14px
 
 <section id="pd"><div class="wrap">
  <h2 class="rv" style="text-align:center">The Prisoner’s Dilemma</h2>
- <p class="lead rv">Two prisoners are questioned separately about a crime they may have committed together. Each can stay silent or confess. Try every combination.</p>
+ <p class="lead rv">Two prisoners are separately interrogated for a crime they may have committed together. Each can stay silent or confess. Imagine you’re one of the prisoners. Here’s how the situation can play out… try every combination:</p>
  <p class="how rv"><b>How to read the table:</b> rows are your choice, columns are your partner’s. The box where they cross is what happens.</p>
  <div class="pick">
   <div class="grp"><h3>You</h3><div class="btns" data-who="me"><button data-c="s">🤐 Stay silent</button><button data-c="c">🗣️ Confess</button></div></div>
@@ -173,7 +174,7 @@ td.hit{background:var(--lime);transform:scale(1.04);box-shadow:0 16px 30px -14px
  <div class="res" id="res"></div>
  <p class="say" id="say" aria-live="polite">Pick one choice for you and one for your partner.</p>
  <div class="why rv"><h3>Why does this happen?</h3>
- <p>Whatever your partner does, confessing gets you a shorter sentence. Your partner thinks the same thing. So both confess and each serve 3 years, even though staying silent together (1 year each) was better for both. That “both confess” result is the Nash equilibrium (Axelrod and Dion 1385).</p></div>
+ <p>Betraying will always yield a better individual result, no matter what choice your partner makes. But trusting your partner and staying silent has the potential to lead to a better outcome for both parties. This leads to a Nash equilibrium, where both have a high probability of betraying one another, despite the fact that if both had stayed silent and trusted one another, that would have led to a more favorable collective outcome (Axelrod and Dion 1385).</p></div>
 </div></section>
 
 <section id="key"><div class="wrap">
@@ -190,7 +191,7 @@ td.hit{background:var(--lime);transform:scale(1.04);box-shadow:0 16px 30px -14px
 <p class="cap">Top line: bread every 5 seconds. Bottom line: every 10 seconds (sped up here).</p>
 <div class="wrap">
  <div class="stats rv"><div class="stat"><b>22 ducks</b>chose the 5-second spot</div><div class="stat"><b>11 ducks</b>chose the 10-second spot</div></div>
- <div class="defbox rv"><p><b style="color:var(--lime)">Nash equilibrium</b> is a situation where no player can do better by switching on their own. The ducks reached it with no math: if one duck moved, it would get less food. That split matched biologist David Harper’s calculation exactly (Siegfried 74).</p></div>
+ <div class="defbox rv"><p>This example of ducks at a pond fits what is called a <b class="glow">Nash Equilibrium</b>, where no player gains a significant edge over the others by attempting to change strategies on their own. The ducks reached this equilibrium with no math whatsoever, matching biologist David Harper’s calculations perfectly (Siegfried 74). This is one amazing example of how game theory shows up in the natural world.</p></div>
 </div></section>
 
 <section id="wc"><div class="wrap">
